@@ -246,6 +246,7 @@ Page({
       }
       t = setTimeout(this.calc, intervalTime);
     } else {
+      wx.hideLoading()
       clearTimeout(t);
     }
   }
@@ -275,6 +276,10 @@ Page({
       content: '您确定开始？',
       success: function (res) {
         if (res.confirm) {
+          wx.showLoading({
+            title: '自动博饼中...',
+            mask: true
+          })
           self.ini();
           //生成所有参与者的博饼基础信息
           var tempResultInfos = [];
@@ -317,18 +322,15 @@ Page({
       resultInfos: tempResultInfos
     });
     if (isSuccess) {
-      wx.showLoading({
+      wx.showToast({
         title: '清点完成',
-        icon: 'success',
-        duration: 1000,
         mask: true
       })
     }
     else{
-      wx.showLoading({
+      wx.showToast({
         title: '无需清点',
-        icon: 'loading',
-        duration: 1000,
+        icon: "none",
         mask: true
       })
     }
@@ -404,11 +406,4 @@ Page({
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
