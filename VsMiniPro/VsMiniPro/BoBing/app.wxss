@@ -1,0 +1,55 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.customContainer{
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+.row{
+  width: 100%;
+  border-bottom: solid #000 0.01rem;
+}
+.row input{
+  font-size:0.8rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  margin-left:1.5rem;
+  line-height: 1.5rem;
+}
+button{
+  margin-left:1.5rem;
+  width: 6rem;
+  display: inline-block;
+  background-color:#fff;
+}
+.buttonContainer{
+  margin:1rem 0 1rem 0;
+  text-align: center;
+}
+
+.operate{
+  width:100%;
+  text-align: center;
+  margin-top:1.5rem;
+}
+
+.operate button{
+  margin-left:0.5rem;
+}
+.next{
+  margin: 1.5rem;
+  text-align: center;
+}
+.next button{
+  margin: auto;
+  width:60%;
+  }

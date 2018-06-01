@@ -1,0 +1,119 @@
+.start {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0;
+  text-align: center;
+}
+
+.start button {
+  width: 90%;
+  margin: 0.5rem auto;
+  padding: 0;
+  height: 2.3rem;
+  line-height: 2.3rem;
+}
+
+.log {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.detail {
+  width: 95%;
+  margin: 0.25rem auto;
+}
+
+.detail .title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0rem auto;
+}
+
+.detail .content {
+  font-size: 0.8rem;
+}
+
+.people {
+  border: 1px solid #000;
+  margin: 0.5rem auto;
+  padding: 0.5rem 0.5rem;
+}
+
+.peopleBaseDetailInfo {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.peopleBaseDetailInfo .peopleName {
+  font-size: 0.8rem;
+}
+
+.peopleBaseDetailInfo .luckNum {
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.peopleBaseDetailInfo .luckNum text {
+  font-size: 1rem;
+}
+
+.peopleDetailInfo {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.peopleDetailInfo text {
+  font-size: 0.7rem;
+  display: inline-block;
+  margin-left: 0.15rem;
+}
+
+.peopleDetailInfo .result, .peopleDetailInfo .aliasResult,
+.peopleDetailInfo .prizeResult {
+  font-size: 1rem;
+}
+
+.zhuangyuanList .list {
+  margin: 1rem 0;
+  border: 1px solid #000;
+}
+
+.zhuangyuanItem {
+  font-size: 0.7rem;
+  margin: 1rem 0.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #000;
+}
+
+.finalZhuanyuan {
+  display: block;
+}
+
+.finalZhuanyuanInfo {
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid #000;
+}
+
+.finalZhuanyuanInfo .alias {
+  font-size: 0.8rem;
+  color: red;
+}
+
+.finalZhuanyuanInfo text {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.finalZhuanyuanOperate {
+  width: 100%;
+  text-align: center;
+}
+
+.finalZhuanyuanOperate .getPrize,.finalZhuanyuanOperate .gotoTop{
+  width: 100%;
+  margin: 0.5rem auto;
+  height: 2.3rem;
+  line-height: 2.3rem;
+}

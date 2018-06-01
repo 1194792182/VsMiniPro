@@ -1,0 +1,36 @@
+.prizeBaseInfo{
+  width: 100%;
+  margin-left:1.5rem;
+}
+.prizeBaseInfo text{
+  margin:0.5rem 0;
+  display: block;
+  font-size:0.7rem;
+}
+
+.prizeBaseInfo label{
+  margin:0.5rem 0;
+  display: block;
+  font-size:0.6rem;
+}
+.introHeader{
+  padding: 1rem;
+  width:95%;
+  margin: auto;
+  font-size:0.8rem;
+  border-top: solid 1px #000;
+}
+.introHeader .title{
+  font-weight: bold;
+  padding: 0.5rem;
+  width: 60%;
+  margin: auto;
+}
+.intro{
+  font-size:0.8rem;
+  margin: 0.5rem auto;
+}
+.intro label{
+  font-weight: bold;
+   font-size:0.8rem;
+}

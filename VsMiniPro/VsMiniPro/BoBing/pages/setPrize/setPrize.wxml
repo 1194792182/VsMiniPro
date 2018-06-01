@@ -1,0 +1,52 @@
+<view class="customContainer">
+
+
+  <block wx:for="{{lists}}" wx:key="key">
+    <view class="row" data-id="{{item.id}}">
+      <view class='prizeBaseInfo'>
+        <text>官员级别：{{item.levelAlias}}</text>
+        <text>等级：{{item.level}}</text>
+        <label>
+          规则： {{item.rule}}
+        </label>
+
+      </view>
+      <view class='prizeInfo'>
+
+        <input class="prizeName" data-id="{{item.id}}" maxlength="20" placeholder="奖品名称" value="{{item.prizeName}}" bindinput="bindPrizeNameInput" />
+      </view>
+      <view class='prizeInfo'>
+
+        <input data-id="{{item.id}}" class="prizeStock" maxlength="3" type="digit" placeholder="奖品数量" bindinput="bindPrizeStockInput" value="{{item.prizeStock}}" />
+      </view>
+    </view>
+  </block>
+  <view class='operate'>
+    <button size='mini' catchtap='save'>保存设置</button>
+    <button size='mini' catchtap='reset'>重置</button>
+    <button size='mini' catchtap='relaod'>重载</button>
+  </view>
+  <view class="next">
+    <button type="primary" size="mini" catchtap='next'>下一步</button>
+  </view>
+  <view class='introHeader'>
+    <view class='title'>
+      关于状元同级大小比较的说明
+    </view>
+    <view class='intro'>
+      <label>四红：</label> 444xy x+y=12>11>10>9>8>7>6>5>4>3
+    </view>
+    <view class='intro'>
+      <label>五子登科：</label>
+      66666x>55555x>33333x>22222x>11111x x=6>5>3>2>1
+    </view>
+    <view class='intro'>
+      <label>五红：</label>
+      44444x x=6>5>3>2>1
+    </view>
+    <view class='intro'>
+      <label>黑六勃：</label>
+      666666＞555555＞333333＞2222222
+    </view>
+  </view>
+</view>

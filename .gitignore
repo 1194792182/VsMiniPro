@@ -3,3 +3,5 @@
 ################################################################################
 
 /VsMiniPro/VsMiniPro/bin/Debug/netcoreapp2.0
+/VsMiniPro/VsMiniPro/obj
+/VsMiniPro/.vs/VsMiniPro/v15

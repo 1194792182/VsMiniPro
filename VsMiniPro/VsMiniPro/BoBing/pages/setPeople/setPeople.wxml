@@ -1,0 +1,22 @@
+<view class="customContainer">
+
+  <block wx:for="{{lists}}" wx:key="id">
+    <view class="row" data-id="{{item.id}}">
+      <input class="name" data-id="{{item.id}}" maxlength="8" placeholder="姓名" value="{{item.name}}" bindinput="bindNameInput" />
+      <input data-id="{{item.id}}" class="randseed" maxlength="9" type="digit" placeholder="幸运数字" bindinput="bindRandSeedInput" value="{{item.randseed}}"/>
+      <view class='buttonContainer'>
+        <button data-id="{{item.id}}" size='mini' catchtap='addRow'>添加一个</button>
+        <button data-id="{{item.id}}" size='mini' catchtap='delRow'>删除一个</button>
+      </view>
+    </view>
+  </block>
+  <view class='operate'>
+    <button size='mini' catchtap='save'>保存设置</button>
+    <button size='mini' catchtap='reset'>重置</button>
+    <button size='mini' catchtap='relaod'>重载</button>
+  </view>
+<view class="next">
+  <button type="primary" size="mini" catchtap='next'>下一步</button>
+  </view>
+
+</view>

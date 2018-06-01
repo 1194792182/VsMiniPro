@@ -1,0 +1,85 @@
+<scroll-view style='height:{{scrollViewHeight}}px' scroll-y scroll-into-view="{{toView}}" >
+<view id="start" class="start" hidden="{{hideStartBtn==1?true:false}}">
+  <button type="primary" size="default" catchtap='start' disabled='{{disableStartBtn==1?true:false}}'>{{btnValue}}</button>
+<button type="primary" size="default" catchtap='gotoBottom' disabled='{{disableStartBtn==1?true:false}}' class="seeResult" hidden='{{hideGotoBottom==1?true:false}}'>到底部</button>
+</view>
+
+<view class='log' hidden='{{hideDetail==1?true:false}}'>
+  <view class='detail'>
+    <view class='title'>
+      参与者博饼详情：
+    </view>
+    <view class='content'>
+      <block wx:for="{{resultInfos}}" wx:key="id" wx:for-item="item">
+        <view class="people">
+          <view class='peopleBaseDetailInfo'>
+            <text class='peopleName'>{{item.name}} 开始博饼</text>
+            <view></view>
+            <view class="luckNum">使用的幸运数字是:
+              <text>{{item.luckNum}}</text>
+            </view>
+          </view>
+          <block wx:for="{{item.detailList}}" wx:key="count" wx:for-item="subItem">
+            <view class="peopleDetailInfo">
+              <text class="count">第{{subItem.count}}轮</text>
+              <text>骰子数是：</text>
+              <text class="result">{{subItem.numStr}}</text>
+              <view></view>
+              <text>获得：</text>
+              <text class="aliasResult">{{subItem.alias}}</text>
+              <view></view>
+              <text>奖品是：</text>
+              <text class="prizeResult">{{subItem.prizeName}}</text>
+              <view></view>
+              <text>剩余：</text>
+              <text class="remainQty">{{subItem.qty}}</text>
+            </view>
+          </block>
+        </view>
+      </block>
+      <view class='zhuangyuanList' hidden='{{hideZhuangyuanList==1?true:false}}'>
+        <view class='title'>{{zhuangYuanListTitle}}</view>
+        <view class='list'>
+          <block wx:for="{{zhuangYuanList}}" wx:key="id" wx:for-item="item">
+            <view class='zhuangyuanItem'>
+              <text class="id">序号：{{item.id}}</text>
+              <view></view>
+              <text class="peopleName">姓名：{{item.peopleName}}</text>
+              <view></view>
+              <text class="numStr">骰子数：{{item.numStr}}</text>
+              <view></view>
+              <text class="level">级别：{{item.level}}</text>
+              <view></view>
+              <text class="alias">别名：{{item.alias}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="finalZhuanyuan">
+        <view class="title">
+          {{finalZhuanyuanTitle}}
+        </view>
+        <view class="finalZhuanyuanInfo">
+          <text class="id">
+            序号：{{finalZhuangyuan.id}}
+            </text>
+          <text class="peopleName">
+            姓名：{{finalZhuangyuan.peopleName}}
+            </text>
+          <text class="alias">
+            {{finalZhuangyuan.alias}}
+            </text>
+        </view>
+        <view id="getPrize" class="finalZhuanyuanOperate">
+          <button class='getPrize' type="primary"  catchtap='getPrize'>清点奖品</button>
+        </view>
+        <view class="finalZhuanyuanOperate">
+          <button class='gotoTop' type="primary"  catchtap='gotoTop'>到顶部</button>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+</scroll-view>

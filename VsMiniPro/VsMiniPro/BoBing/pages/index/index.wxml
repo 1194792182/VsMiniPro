@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+      <text class="programName">中秋节博饼小程序</text>
+      <text class="author">作者：姚俊杰</text>
+      <text class="contact">联系方式：QQ1194792182</text>
+  </view>
+  <view class="begin">
+  <button type="primary" size="default" bindtap='bindViewSetPeople'>开始</button>
+  </view>
+</view>
