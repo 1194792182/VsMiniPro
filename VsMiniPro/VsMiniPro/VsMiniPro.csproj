@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Test2\" />
+  </ItemGroup>
+
 </Project>
